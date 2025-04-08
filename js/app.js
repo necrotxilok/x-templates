@@ -63,7 +63,7 @@
 				page_type: id == 1 ? 1 : 2,
 			});
 			if (page_id == 1) {
-				data.cards = [];
+				delete data.cards;
 			}
 			pages_data[id] = data;
 			onLoad(data);
