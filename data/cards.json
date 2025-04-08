@@ -3,16 +3,20 @@
 		{ 
 			"title": "C1", 
 			"description": "Card 1 test description.",
-			"links": []
+			"long_description": "Adipiscing elit nec auctor luctus commodo in laoreet, sem proin augue non leo eu eleifend dui placerat orci tempus."
 		},
 		{ 
 			"title": "C2", 
 			"description": "Card 2 test description.",
-			"links": []
+			"long_description": "Conubia lacus per litora bibendum etiam magna varius sociosqu fames gravida.",
+			"links": [
+				{ "name": "Necropix", "href": "https://necropix.ntk.com.es/" }
+			]
 		},
 		{ 
 			"title": "C3", 
-			"description": "Card 3 test description."
+			"description": "Card 3 test description.",
+			"long_description": "Suspendisse turpis nulla primis praesent scelerisque aliquet maecenas pellentesque aliquam duis."
 		}
 	]
 }

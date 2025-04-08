@@ -1,8 +1,10 @@
 <div class="cards">
 	<h3>View Cards</h3>
-	{{#each cards (card)}}
-	{{> "components/card/card"}}
-	{{else}}
-	<p>There are no cards.</p>
-	{{/each}}
+	<div class="list">
+		{{#each cards (card)}}
+		{{> "components/card/card"}}
+		{{else}}
+		<p>There are no cards.</p>
+		{{/each}}
+	</div>
 </div>

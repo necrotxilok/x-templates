@@ -35,12 +35,13 @@
 		});
 	}
 
-	function loadData(page, onLoad) {
-		if (pages_data[page_id]) {
-			onLoad(pages_data[page_id]);
+	function loadData(id, onLoad) {
+		if (pages_data[id]) {
+			onLoad(pages_data[id]);
 			return;
 		}
-		console.log('Loading data for page', page);
+		console.log('Loading Page Data', id);
+		var page = "page_" + id;
 		var load_requests = [
 			$.get('data/' + page + '.json'),
 		];
@@ -58,20 +59,20 @@
 				cards_data = allData[2];
 			}
 			var data = $.extend({}, menu_data, cards_data, page_data, {
-				page_id: page_id,
-				page_type: page_id == 1 ? 1 : 2,
+				page_id: id,
+				page_type: id == 1 ? 1 : 2,
 			});
 			if (page_id == 1) {
 				data.cards = [];
 			}
-			pages_data[page_id] = data;
+			pages_data[id] = data;
 			onLoad(data);
 		});
 	}
 
 	loadTemplates(function() {
 		console.log("Handlebars", Handlebars);
-		loadData("page_" + page_id, function(data) {
+		loadData(page_id, function(data) {
 			console.log("First Load Finished! :D", data);
 			var html = Handlebars.render('app', data);
 			$('#app').html(html);
@@ -84,7 +85,7 @@
 			page_id = $this.data('page-id');
 			localStorage.setItem('x-templates.page_id', page_id);
 			console.log('Loading Page:', page_id);
-			loadData("page_" + page_id, function(data) {
+			loadData(page_id, function(data) {
 				console.log("Page Load OK!", data);
 				var html = Handlebars.render('app', data);
 				$('#app').html(html);

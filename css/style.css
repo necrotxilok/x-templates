@@ -4,6 +4,14 @@ body {
 	font-family: Arial, Sans-Serif;
 }
 
+a {
+	color: #777;
+}
+a:hover,
+a:active {
+	color: #fff;
+}
+
 button {
 	padding: 20px 40px;
 	font-size: 20px;
@@ -21,6 +29,7 @@ button {
 .panels .right-panel {
 	position: absolute;
 	left: 240px;
+	width: calc(100% - 240px);
 }
 
 .menu {
@@ -47,6 +56,44 @@ button {
 	color: #000;
 }
 
+.page {
+	padding: 0px 30px;
+	margin-bottom: 50px;
+}
+
+.cards .list {
+	display: flex;
+}
+.cards .card {
+	width: 30%;
+	margin: 10px;
+	border: 1px solid #fff;
+	padding: 20px;
+}
+.cards .card .title {
+	font-weight: bold;
+	font-size: 150%;
+	margin: 10px 0;
+}
+.cards .card .underline {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-top: 1px solid #fff;
+}
+.cards .card .header {
+	position: relative;
+	background-color: #333;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+.cards .card .header .close {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+}
+.cards .card .links {
+	margin-top: 20px;
+}
 
 .matrix .row {
 	display: flex;

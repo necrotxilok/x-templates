@@ -6,17 +6,19 @@
 	<p>Conubia lacus per litora bibendum etiam magna varius sociosqu fames gravida, non aenean cras diam nibh porttitor integer interdum feugiat netus facilisi, faucibus proin metus morbi aptent sed fringilla enim est.</p>
 
 	<p>Euismod justo mauris viverra class id metus proin aliquam pellentesque arcu mi.</p>
+
 	{{> "components/cards"}}
-</div>
-<div class="matrix">
-	<h3>Matrix Data</h3>
-	{{#each matrix.rows (row_idx,row)}}
-	<div class="row">
-		{{#each row (col_idx, col)}}
-		<div class="col" data-x="{{row_idx}}" data-y="{{col_idx}}">{{col}}</div>
+
+	<div class="matrix">
+		<h3>Matrix Data</h3>
+		{{#each matrix.rows (row_idx,row)}}
+		<div class="row">
+			{{#each row (col_idx, col)}}
+			<div class="col" data-x="{{row_idx}}" data-y="{{col_idx}}">{{col}}</div>
+			{{/each}}
+		</div>
+		{{else}}
+		<p>There is no data for matrix</p>
 		{{/each}}
 	</div>
-	{{else}}
-	<p>There is no data for matrix</p>
-	{{/each}}
 </div>
