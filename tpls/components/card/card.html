@@ -1,0 +1,9 @@
+<div class="card" data-id="{{card.id}}">
+	{{#if options.cards_header_active == true}}
+		{{> "components/card/card-header"}}
+	{{/if}}
+	{{> "components/card/card-body"}}
+	{{#if options.cards_footer_active == true}}
+		{{> "components/card/card-footer"}}
+	{{/if}}
+</div>

@@ -1,0 +1,57 @@
+body {
+	background-color: #111;
+	color: #ccc;
+	font-family: Arial, Sans-Serif;
+}
+
+button {
+	padding: 20px 40px;
+	font-size: 20px;
+	border: none;
+	background-color: #333;
+	color: #ccc;
+	border-radius: 10px;
+}
+
+.panels .left-panel {
+	width: 240px;
+	position: absolute;
+	left: 0;
+}
+.panels .right-panel {
+	position: absolute;
+	left: 240px;
+}
+
+.menu {
+	padding: 10px;
+}
+.menu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.menu .menu-item {
+	display: inline-block;
+	padding: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+.menu .menu-item:hover,
+.menu .menu-item:active {
+	background-color: #333;
+}
+.menu .menu-item.selected {
+	background-color: #ddd;
+	color: #000;
+}
+
+
+.matrix .row {
+	display: flex;
+}
+.matrix .row .col {
+	width: 20px;
+	padding: 10px;
+}

@@ -1,0 +1,11 @@
+<div class="footer">
+	<div class="underline"></div>
+	<div class="long-description">{{card.long_description}}</div>
+	{{#if options.cards_footer_links && card.links}}
+	<div class="links">
+		{{#each card.links (link)}}
+			<a class="btn" href="{{link.href}}">{{link.name}}</a>
+		{{/each}}
+	</div>
+	{{/if}}
+</div>

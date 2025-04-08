@@ -1,0 +1,7 @@
+<div class="menu">
+	<ul>
+		{{#each menu (key, item)}}
+		<li><span class="menu-item item-{{index}} {{#if page_id == item.page_id}}selected{{/if}}" data-page-id="{{item.page_id}}">{{item.name}}</span></li>
+		{{/each}}
+	</ul>
+</div>

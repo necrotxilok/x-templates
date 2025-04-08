@@ -1,0 +1,8 @@
+{
+	"title": "Test Cards 3",
+	"options": {
+		"cards_header_active": false,
+		"cards_footer_active": true,
+		"cards_footer_links": false
+	}
+}
