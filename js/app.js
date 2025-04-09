@@ -72,6 +72,7 @@
 
 	loadTemplates(function() {
 		console.log("Handlebars", Handlebars);
+		Handlebars.setDebugMode(true);
 		loadData(page_id, function(data) {
 			console.log("First Load Finished! :D", data);
 			var html = Handlebars.render('app', data);
