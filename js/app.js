@@ -70,13 +70,23 @@
 		});
 	}
 
+	function render(tpl, data) {
+		console.log('---------------------');
+		console.log('Render App');
+		console.time();
+		var html = Handlebars.render(tpl, data);
+		console.log('Render Time');
+		console.timeEnd();
+		console.log('---------------------');
+		$('#app').html(html);
+	}
+
 	loadTemplates(function() {
 		console.log("Handlebars", Handlebars);
 		Handlebars.setDebugMode(true);
 		loadData(page_id, function(data) {
 			console.log("First Load Finished! :D", data);
-			var html = Handlebars.render('app', data);
-			$('#app').html(html);
+			render('app', data);
 		});
 	});
 
@@ -88,8 +98,7 @@
 			console.log('Loading Page:', page_id);
 			loadData(page_id, function(data) {
 				console.log("Page Load OK!", data);
-				var html = Handlebars.render('app', data);
-				$('#app').html(html);
+				render('app', data);
 			});
 		});
 	})
